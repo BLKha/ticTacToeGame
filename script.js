@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             }
             if(a===b && b===c){
                 roundWon=true;
+                winningTitles=winCondition;
                 break;
             }
 }        
@@ -45,12 +46,18 @@ window.addEventListener('DOMContentLoaded',()=>{
         if(roundWon){
             announce(currentPlayer==='X'? PLAYERX_WON : PLAYERO_WON);
             isGameActive=false;
+            highlightWinnigTitles(winningTitles)
             return;
         }
         if(!board.includes(''))
             announce(TIE)
     }
     
+    function highlightWinnigTitles(winningTitles){
+        winningTitles.forEach(index=>{
+            tiles[index].classList.add('winning')
+        })
+    }
 
     const announce =(type)=>{
         switch(type){
@@ -87,6 +94,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             tile.innerText='';
             tile.classList.remove('playerX');
             tile.classList.remove('playerO');
+            tile.classList.remove('winning');
         })
     }
 

@@ -48,6 +48,11 @@ body{
     font-size: 50px;
     cursor: pointer;
 }
+.tile.winning{
+    background-color: #ff3bb4;
+    animation: changeColor 2s linear infinite ;
+}
+
 .playerX{
     color: #09c372;
 }
@@ -70,4 +75,15 @@ body{
     font-size: 20px;
     margin:0 0 1em 0;
     cursor: pointer;
+}
+@keyframes changeColor{
+    0%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
 }
