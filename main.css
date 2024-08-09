@@ -6,8 +6,10 @@
     font-family: "Aref Ruqaa Ink",sans-serif;
     box-sizing: border-box;
 }
-.container{
+body{
     background: rgba(8, 33, 39, 0.975);
+}
+.container{
     width: 100vw;
     height: 100%;
     padding-top: 1px;
